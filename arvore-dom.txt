@@ -1,0 +1,27 @@
+html
+  - body[#1]
+    - div.container [#2]
+      - div.data [#3]
+        - div.form [#4]
+          - div.row[#5]
+            - label[#6]
+            - input.height[#7]
+          - div.row[#8]
+            - label[#9]
+            - input.weight[#10]
+          - button.action[#11]
+      - hr [#12]
+      - div.data [#13]
+        - span#imc [#14]
+
+
+@media only screen and (max-width: 768px) .container
+@media only screen and (min-width: 769px) .container [#2]
+.container [#2]
+.data #3, #13
+.data label #6 #9
+.data input #7 #11
+.data .row #5 #8
+.data .form button        #11
+.data .form button:hover  #11
+.data .form button:active #11
